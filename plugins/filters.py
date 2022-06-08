@@ -59,14 +59,14 @@ async def addfilter(client, message):
     text = extracted[0].lower()
 
     if not message.reply_to_message and len(extracted) < 2:
-        await message.reply_text("Arey Sona! pehle koi conetnt toh add kro usko baad filter save krna ! oky Baby !", quote=True)
+        await message.reply_text("Add some content to save your filter!", quote=True)
         return
 
     if (len(extracted) >= 2) and not message.reply_to_message:
         reply_text, btn, alert = parser(extracted[1], text)
         fileid = None
         if not reply_text:
-            await message.reply_text("You cannot have buttons alone, give some text to go with it Sona ! ", quote=True)
+            await message.reply_text("You cannot have buttons alone, give some text to go with it!", quote=True)
             return
 
     elif message.reply_to_message and message.reply_to_message.reply_markup:
@@ -122,7 +122,7 @@ async def get_all(client, message):
     chat_type = message.chat.type
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Oye Anzaan Admin ji, kripaa kr ye command ko mujhe kopche m bhejo 👉 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     if chat_type == "private":
         userid = message.from_user.id
         grpid = await active_connection(str(userid))
@@ -132,10 +132,10 @@ async def get_all(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Arey Sona ek dfa fir se dekh lo ki main tumhaare kisi group hun bhi ya nhi... 😂", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("Arey! Arey! pehle mujhe kisi group mei ADD toh krr lo ji... 🤭", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -156,7 +156,7 @@ async def get_all(client, message):
     texts = await get_filters(grp_id)
     count = await count_filters(grp_id)
     if count:
-        filterlist = f"Ab tk ka total filters 👉 **{title}** : {count}\n\n"
+        filterlist = f"Total number of filters in **{title}** : {count}\n\n"
 
         for text in texts:
             keywords = " ×  `{}`\n".format(text)
@@ -165,14 +165,14 @@ async def get_all(client, message):
 
         if len(filterlist) > 4096:
             with io.BytesIO(str.encode(filterlist.replace("`", ""))) as keyword_file:
-                keyword_file.name = "keywords.txt" 
+                keyword_file.name = "keywords.txt"
                 await message.reply_document(
                     document=keyword_file,
                     quote=True
                 )
             return
     else:
-        filterlist = f"Hey Dear jaanemann ! Mujhe ek bhi Active filters nhi mila isme 👉 **{title}**"
+        filterlist = f"There are no active filters in **{title}**"
 
     await message.reply_text(
         text=filterlist,
@@ -184,7 +184,7 @@ async def get_all(client, message):
 async def deletefilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Oye Anzaan Admin ji, kripaa kr ye command ko mujhe kopche m bhejo 👉 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -195,10 +195,10 @@ async def deletefilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Arey Sona ek dfa fir se dekh lo ki main tumhaare kisi group hun bhi ya nhi... 😂", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("Arey! Arey! pehle mujhe kisi group mei ADD toh krr lo ji... 🤭", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
 
     elif chat_type in ["group", "supergroup"]:
         grp_id = message.chat.id
@@ -219,7 +219,7 @@ async def deletefilter(client, message):
         cmd, text = message.text.split(" ", 1)
     except:
         await message.reply_text(
-            "<b>Mention the filtername which you wanna delete!Sona, Jis filter ko delete krna h usko neeche diye gye format mei bhejiye, Main permanently delete krr dungii.. ♥️ </b>\n\n"
+            "<i>Mention the filtername which you wanna delete!</i>\n\n"
             "<code>/del filtername</code>\n\n"
             "Use /viewfilters to view all available filters",
             quote=True
@@ -235,7 +235,7 @@ async def deletefilter(client, message):
 async def delallconfirm(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Oye Anzaan Admin ji, kripaa kr ye command ko mujhe kopche m bhejo 👉 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -246,10 +246,10 @@ async def delallconfirm(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Arey Sona ek dfa fir se dekh lo ki main tumhaare kisi group hun bhi ya nhi... 😂", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("Arey! Arey! pehle mujhe kisi group mei ADD toh krr lo ji... 🤭", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -262,10 +262,10 @@ async def delallconfirm(client, message):
     st = await client.get_chat_member(grp_id, userid)
     if (st.status == "creator") or (str(userid) in ADMINS):
         await message.reply_text(
-            f"Babu, Attention here ! Main is command se iss chat ka 👉 '{title}' saara content delete kr dungii.\n kya aap sach mei delete krna chate hai ??",
+            f"This will delete all filters from '{title}'.\nDo you want to continue??",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="Haan",callback_data="delallconfirm")],
-                [InlineKeyboardButton(text="Nhi",callback_data="delallcancel")]
+                [InlineKeyboardButton(text="YES",callback_data="delallconfirm")],
+                [InlineKeyboardButton(text="CANCEL",callback_data="delallcancel")]
             ]),
             quote=True
         )
