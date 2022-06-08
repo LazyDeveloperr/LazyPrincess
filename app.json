@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/EvamariaTG/EvaMaria",
-    "repository": "https://github.com/EvamariaTG/EvaMaria",
+    "website": "https://github.com/LazyDeveloperss/test9",
+    "repository": "https://github.com/LazyDeveloperss/test9",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
