@@ -1,5 +1,5 @@
 {
-    "name": "LazyPrincessBOT",
+    "name": "EvaMariaBot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/LazyDeveloperss/test9",
-    "repository": "https://github.com/LazyDeveloperss/test9",
+    "website": "https://github.com/EvamariaTG/EvaMaria",
+    "repository": "https://github.com/EvamariaTG/EvaMaria",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
