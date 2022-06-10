@@ -2,7 +2,7 @@
   <img src="assets/logo.png" alt="Lazy Princess Logo">
 </p>
 <h1 align="center">
-  <b>Eva Maria Bot</b>
+  <b> Lazy Princess BOT </b>
 </h1>
 
 
