@@ -12,7 +12,7 @@ My name is <a href=https://t.me/{}>{}</a>, I can provide movies just add me to y
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Eva Maria is a open source project. 
-- Source - https://github.com/LazyDeveloperss/test9  
+- Source - https://github.com/LazyDeveloperr/LazyPrincess  
 
 <b>DEVS:</b>
 - <a href=https://t.me/LazyDevelopers>LazyDevelopers</a>"""
