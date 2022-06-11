@@ -1,8 +1,8 @@
 class script(object):
     START_TXT = """Hello jaanemann {},
-My name is <a href=https://t.me/{}>{}</a>, I can provide movies just add me to your group and enjoy ♥️"""
+My name is <a href=https://t.me/{}>{}</a>, Sona Main 999999kmps ke speed se movie search kr sktii hun, bs mujhe apne group mei add kro aor mera kamaal dekho... ♥️"""
     HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+Here is the help for my COMMANDS."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
 ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/LazyDevelopers>LazyDevelopers</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
@@ -18,7 +18,7 @@ My name is <a href=https://t.me/{}>{}</a>, I can provide movies just add me to y
 - <a href=https://t.me/LazyDevelopers>LazyDevelopers</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
+- Filter is the feature were users can set automated replies for a particular keyword and LazyPriness will respond whenever that keyword hits the message
 
 <b>NOTE:</b>
 1. Lazy Princess should have admin privillage.
