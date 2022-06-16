@@ -1,6 +1,5 @@
 import re
 from os import environ
-from info import MELCOW_NEW_USERS
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
