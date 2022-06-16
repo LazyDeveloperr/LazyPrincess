@@ -41,14 +41,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("You are using one of my old message sona ♥️, please send the request again.", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages sona ♥️, please send the request again.", show_alert=True)
+        await query.answer("You are using one of my old message sona ♥️, please send the request again.", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Sorry Sona! hamaare @real_MoviesAddaa ke Database mein ye movie abhi available nhi h !\n Have patience ! our great admins will upload it as soon as possible ! \n @real_MoviesAddaa Now2Death')
+            k = await query.message.edit('Sorry Sona! hamaare @real_MoviesAddaa ke Database mein ye movie abhi available nhi h !\n Have patience ! our great admins will upload it as soon as possible ! \n @real_MoviesAddaa Now2Death \n\n \n Discuss your problem with our admin here 👉 @discussion_groupp ')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -268,7 +268,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('🙈 I love you dear Developer indu ♥️')
     elif "deletecb" in query.data:
         await query.answer()
 
