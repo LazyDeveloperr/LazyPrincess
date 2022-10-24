@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """Hello jaanemann {},
-My name is <a href=https://t.me/{}>{}</a>, Sona Main 999999kmps ke speed se movie search kr sktii hun, bs mujhe apne group mei add kro aor mera kamaal dekho... 🙈\n\nJoin us @LazyDevelopers Now2Death ♥️"""
+My name is <a href=https://t.me/{}>{}</a>, Sona Main 999999kmps ke speed se movie search kr sktii hun, bs mujhe apne group mei add kro aor mera kamaal dekho... 🙈\n\nJoin us @LazyDeveloper Now2Death ♥️"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 Here is the help for my COMMANDS."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
