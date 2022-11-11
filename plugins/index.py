@@ -31,7 +31,7 @@ async def index_files(bot, query):
         return await query.answer('Ruko zraa! sabr kro, pehle wala kaam ko poora toh hone do', show_alert=True)
     msg = query.message
 
-    await query.answer('raste mei hai...⏳', show_alert=True)
+    await query.answer('Wait please ! Adding files to Database...', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
                                f' Congrats Sona! Your Submission for indexing {chat} ko hamaare moderators ne accept krr liya hai aor jald hi index add krr diya jayega .',
