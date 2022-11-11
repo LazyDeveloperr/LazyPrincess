@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDevelopers')
+                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
             ],
             [
                 InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -45,7 +45,7 @@ async def start(client, message):
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDevelopers')
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
             ],[
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
@@ -91,7 +91,7 @@ async def start(client, message):
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDevelopers')
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
             ],[
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
@@ -302,7 +302,7 @@ async def delete(bot, message):
         if media is not None:
             break
     else:
-        await msg.edit('Na! ye file Format nhi chlega ! kuchh aor try kro 🤥')
+        await msg.edit('Na! ye Format nhi chlega ! kuchh aor try kro 🤥')
         return
     
     file_id, file_ref = unpack_new_file_id(media.file_id)
@@ -311,7 +311,7 @@ async def delete(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        await msg.edit('Chal Sona Database ka saara files delete ho gya! Ab aage bolo 🤪')
+        await msg.edit('Chal Sona Database se ye file delete ho gya! Ab aage bolo 🤪')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -330,7 +330,7 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('Chal Sona Database ka saara files delete ho gya! Ab aage bolo 🤪')
+                await msg.edit('Chal Sona Database se ye file delete ho gya! Ab aage bolo 🤪')
             else:
                 await msg.edit('File not found in database // File toh Database mei hai hi nhi 🤷‍♀️ !')
 
@@ -361,7 +361,7 @@ async def delete_all_index(bot, message):
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('🙈 I love you dear Developer indu ♥️')
-    await message.message.edit('Chal Sona, Index kiya hua saara files delete ho gya! Ab aage bolo 🤪 ')
+    await message.message.edit('Chal Sona, Index kiya hua saara file delete ho gya! Ab aage bolo 🤪 ')
   
 
 @Client.on_message(filters.command('settings'))
