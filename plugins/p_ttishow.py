@@ -38,11 +38,11 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('🤥 Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('🔔 Updates', url='https://t.me/LazyDevelopers')
+            InlineKeyboardButton('🔔 Updates', url='https://t.me/LazyDeveloper')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In ♥️♥️ {message.chat.title} ♥️♥️\n\n Mujhse releated agr mnn mei koi sawaal hai ya mujhe use krna janne ke liye CONTACT-SUPPORT prr jaaye...</b>",
+            text=f"<b>Thank you For Adding Me In ♥️♥️ {message.chat.title} ♥️♥️\n\n Mujhse releated agr mnn mei koi sawaal hai ya mujhe use krna janne ke liye CONTACT-SUPPORT prr jaaye...</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -53,7 +53,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey Baby {u.mention}, I'm Lazy Princess, Most welcome to ♥️♥️ {message.chat.title} ♥️♥️ !\nAap apne man-pasand content ka naam neeche comment-box mei type kijiye, Agr mere paas available hoga toh main aapko share krr dungi, Agr mere paas nhi hoga toh My love ADMIN ji se content upload krne ko keh dungi 🥰 !! \n 🤍 smile 🤍 </b>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey Baby {u.mention}, Most welcome to ♥️♥️ {message.chat.title} ♥️♥️ !\nAap apne man-pasand content ka naam neeche comment-box mei type kijiye, Agr mere paas available hoga toh main aapko share krr dungi, Agr mere paas nhi hoga toh My love ADMIN ji se content upload krne ko keh dungi 🥰 !! \n 🤍 smile 🤍 </b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -223,7 +223,7 @@ async def unban_a_user(bot, message):
     except PeerIdInvalid:
         return await message.reply("This is an invalid user, make sure ia have met him before.")
     except IndexError:
-        return await message.reply("Thismight be a channel, make sure its a user.")
+        return await message.reply("This might be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
