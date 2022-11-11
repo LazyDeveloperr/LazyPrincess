@@ -41,14 +41,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("You are using one of my old message sona ♥️, please send the request again.", show_alert=True)
+        return await query.answer("This Message is not for you dear. Don't worry you can send new one !", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old message sona ♥️, please send the request again.", show_alert=True)
+        await query.answer("This Message is not for you dear. Don't worry you can send new one !", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -120,14 +120,14 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("You are using one of my old message sona ♥️, please send the request again.", show_alert=True)
+        return await query.answer("This Message is not for you dear. Don't worry you can send new one !", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
         return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('Apne @real_MoviesAddaa ke DataBase mei ye movie Check krti hu sona...')
+    await query.answer('Checking file in our Database ')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Sorry Sona! hamaare @real_MoviesAddaa ke Database mein ye movie abhi available nhi h !\n Have patience ! our great admins will upload it as soon as possible ! \n @real_MoviesAddaa Now2Death \n\n \n Discuss your problem with our admin here 👉 @discussion_groupp ')
+            k = await query.message.edit('😒 currently unavailable ! we are really sorry for inconvenience !\n Have patience ! our great admins will upload it as soon as possible !')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -157,20 +157,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group sona!!", quote=True)
-                    return await query.answer('🙈 I love you dear Developer indu ♥️')
+                    return await query.answer('🙈 I love you dear LazyDeveloper ♥️')
             else:
                 await query.message.edit_text(
                     "Sona ! is chat se toh main connected hu hi nhi!\nAgar connect krna h toh mujhe /connect command do !",
                     quote=True
                 )
-                return await query.answer('🙈 I love you dear Developer indu ♥️')
+                return await query.answer('🙈 I love you dear LazyDeveloper ♥️')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('🙈 I love you dear Developer indu ♥️')
+            return await query.answer('🙈 I love you dear LazyDeveloper ♥️')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -245,7 +245,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('error @LazyDeveloper')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -268,7 +268,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('🙈 I love you dear Developer indu ♥️')
+        return await query.answer('🙈 I love you dear LazyDeveloper ♥️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Hey Sona! Apni private message check kijiye ! Main ye file aapko privately bhej dii hun 🔥! \nShare-US @real_MoviesAddaa ', show_alert=True)
+                await query.answer('✅ Requested file has been sent to our private chat ! /n please check it... ', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDevelopers')
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
         ], [
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
@@ -418,7 +418,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('🙈 I love you dear Developer indu ♥️')
+        await query.answer('🙈 I love you dear LazyDeveloper')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🧰Manual Filter🧰', callback_data='manuelfilter'),
@@ -438,7 +438,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDevelopers'),
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper'),
             InlineKeyboardButton('♥️ Source ♥️', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
@@ -565,7 +565,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('🙈 I love you dear Developer indu ♥️')
+            return await query.answer('🙈 I love you dear LazyDeveloper')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -735,7 +735,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("Mujhe is naam ki koi movie nhi mili sona 😒 \n Discuss your problem with our admin here 👉 @discussion_groupp")
+        k = await msg.reply("😒 currently unavailable ! we are really sorry for inconvenience !\n Have patience ! our great admins will upload it as soon as possible")
         await asyncio.sleep(8)
         await k.delete()
         return
