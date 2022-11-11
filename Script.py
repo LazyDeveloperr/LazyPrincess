@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """Hello jaanemann {},
-My name is <a href=https://t.me/{}>{}</a>, Sona Main 999999kmps ke speed se movie search kr sktii hun, bs mujhe apne group mei add kro aor mera kamaal dekho... 🙈\n\nJoin us @LazyDeveloper Now2Death ♥️"""
+My name is <a href=https://t.me/{}>{}</a>, Trust me ! I can't even imagine how super-fast i can drive your Database channel /n/n 🏎️ Are you ready for Long Drive Baby..."""
     HELP_TXT = """𝙷𝙴𝚈 {}
 Here is the help for my COMMANDS."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
@@ -11,7 +11,7 @@ Here is the help for my COMMANDS."""
 ✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
-- LazyPrincess is an open source project. 
+- Lazy Princess is an open source project. 
 - Source - https://github.com/LazyDeveloperr/LazyPrincess  
 
 <b>DEVS:</b>
@@ -21,7 +21,7 @@ Here is the help for my COMMANDS."""
 - Filter is the feature were users can set automated replies for a particular keyword and LazyPriness will respond whenever that keyword hits the message
 
 <b>NOTE:</b>
-1. Lazy Princess should have admin privillage.
+1. BOT should have admin privillage.
 2. Only admins can add filters in a chat.
 3. Alert buttons have a limit of 64 characters.
 
@@ -32,11 +32,11 @@ Here is the help for my COMMANDS."""
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- Lazy Priness Supports both url and alert inline buttons.
+- Supports both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Lazy Princess supports buttons with any telegram media type.
+2. BOT supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
