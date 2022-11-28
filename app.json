@@ -55,11 +55,11 @@
             "required": false
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com.
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
             "required": true
         },
         "DATABASE_NAME": {
-            "description": "Name of the database in mongoDB.
+            "description": "Name of the database in mongoDB.",
             "required": false
         },
         "COLLECTION_NAME": {
