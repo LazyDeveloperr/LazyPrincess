@@ -5,8 +5,7 @@
   <b> Lazy Princess BOT </b>
 </h1>
 
-
-## Features
+## ⚡️Features
 
 - [x] 🔥 New feature : 
     - [+] ⚡️ Support 2GB + Files ⚡️
