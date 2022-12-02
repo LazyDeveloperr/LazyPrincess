@@ -19,23 +19,23 @@
     "repository": "https://github.com/LazyDeveloperr/LazyPrincess",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token.",
+            "description": "5615807898:AAHiuLERjj5kkPDIKaETSp24D9GpsmAvjcA.",
             "required": true
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "15671595.",
             "required": true
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "bb8f36f9c39a24c7f8b2acbc7ea8c60a.",
             "required": true
         },
         "CHANNELS": {
-            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "description": "-1001631392026.",
             "required": false
         },
         "ADMINS": {
-            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "description": "5732833763.",
             "required": true
         },
         "PICS": {
@@ -43,7 +43,7 @@
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "description": "-1001837748832.",
             "required": true
         },
         "AUTH_USERS": {
@@ -51,15 +51,15 @@
             "required": false
         },
         "AUTH_CHANNEL": {
-            "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
+            "description": "-1001631392026.",
             "required": false
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
+            "description": "https://cloud.mongodb.com/v2/63344f812b21147699ece518#clusters.",
             "required": true
         },
         "DATABASE_NAME": {
-            "description": "Name of the database in mongoDB.",
+            "description": "kushal.",
             "required": false
         },
         "COLLECTION_NAME": {
