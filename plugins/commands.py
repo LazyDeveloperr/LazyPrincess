@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/Team_MCU')
             ],
             [
                 InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -45,7 +45,7 @@ async def start(client, message):
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/Team_MCU')
             ],[
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
@@ -91,7 +91,7 @@ async def start(client, message):
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/Team_MCU')
             ],[
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
