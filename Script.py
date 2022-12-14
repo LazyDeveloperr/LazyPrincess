@@ -12,10 +12,10 @@ Here is the help for my COMMANDS."""
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Lazy Princess is an open source project. 
-- Source - https://github.com/LazyDeveloperr/LazyPrincess  
+- Source - https://github.com/Sudharshan1246/LazyPrincess  
 
 <b>DEVS:</b>
-- <a href=https://t.me/LazyDeveloper>LazyDeveloper</a>"""
+- <a href=https://t.me/Team_MCU>Team_MCU</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and LazyPriness will respond whenever that keyword hits the message
