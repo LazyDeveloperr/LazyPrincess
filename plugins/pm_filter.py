@@ -153,7 +153,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if grpid is not None:
                 grp_id = grpid
                 try:
-                    chat = await client.get_chat(grpid)
+                    chat = await client.get_filte(@Mass_movie_request)
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
@@ -286,7 +286,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You @Team_MCU ♥️')
     elif query.data == "backcb":
         await query.answer()
 
