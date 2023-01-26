@@ -626,8 +626,7 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                user_id = msg.from_user.id
-                await client.send_message(LOG_CHANNEL,f"🦋 #REQUESTED_CONTENTs 🦋,\n\n**Content Name** :`{msg.text}`\n**ID** : `{user_id}`\n**Name**: {msg.from_user.first_name} {msg.from_user.last_name}\n\n ",
+                await client.send_message(LOG_CHANNEL,f"🦋 #REQUESTED_CONTENTs 🦋,\n\n**Content Name** :`{msg.text}`\n**Name**: {msg.from_user.first_name} {msg.from_user.last_name}\n\n ",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
      
                 if settings["spell_check"]:
