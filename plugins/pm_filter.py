@@ -21,7 +21,6 @@ from database.filters_mdb import (
     find_filter,
     get_filters,
 )
-import os
 
 import logging
 
