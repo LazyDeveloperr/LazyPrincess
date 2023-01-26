@@ -22,7 +22,7 @@ from database.filters_mdb import (
     get_filters,
 )
 import os
-log_channel = os.environ.get('LOG_CHANNEL','-1001820894005')
+log_channel = int(os.environ.get('LOG_CHANNEL','-1001820894005'))
 
 import logging
 
