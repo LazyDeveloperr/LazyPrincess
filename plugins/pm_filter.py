@@ -22,7 +22,6 @@ from database.filters_mdb import (
     get_filters,
 )
 import os
-log_channel = int(os.environ.get('LOG_CHANNEL','-1001820894005'))
 
 import logging
 
@@ -629,9 +628,6 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                await client.send_message(log_channel,f"🦋 #REQUESTED_CONTENT 🦋,\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🦋",
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-     
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
                 else:
