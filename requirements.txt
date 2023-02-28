@@ -1,4 +1,4 @@
-pyrogram>=2.0.30
+pyrogram==2.0.35
 tgcrypto
 pymongo[srv]==3.12.3
 motor==2.5.1
@@ -9,3 +9,9 @@ bs4
 imdbpy==2022.7.9
 aiohttp
 pytz
+hachoir
+Pillow
+humanize
+aiofiles
+dnspython 
+pynewtonmath
