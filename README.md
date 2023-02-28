@@ -38,11 +38,11 @@ Read [this](https://telegram.dog/LazyDevelopers/8) before you start messing up w
 * `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com).
 * `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com).
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
+* `REQ_CHANNEL`: Channel ID where logs of requested content is to be sent.
 ### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
 * `LAZY_MODE`: True or False . If true then bot will rename files else it will not rename.
-* `REQ_CHANNEL`: Channel ID where logs of requested content is to be sent.
 * `LAZY_RENAMERS`: ID of the users to which you want to give file renaming authentication. Separate multiple ids by space.
 
 
