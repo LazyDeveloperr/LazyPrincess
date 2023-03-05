@@ -167,16 +167,16 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
-# @Client.on_Callback_query(filters.regex('extractthumb'))
-# async def extractthumb(bot, update):
-#         type = update.data.split("_")[1]
-#         thumbs= update.message.video.thumbs[0]
-#         file_id= thumbs.file_id
-#         location=await bot.download_media(file_id)
-#         z = await update.message.reply(f'Extracting thumbnail...') 
-#         await asyncio(3)
-#         await z.delete()
-#         await update.message.reply_photo(caption="Here is your Thumbnail", photo=location)
+@Client.on_Callback_query(filters.regex('extractthumb'))
+async def extractthumb(bot, update):
+        # type = update.data.split("_")[1]
+        thumbs= update.message.video.thumbs[0]
+        file_id= thumbs.file_id
+        location=await bot.download_media(file_id)
+        z = await update.message.reply(f'Extracting thumbnail...') 
+        await asyncio(3)
+        await z.delete()
+        await update.message.reply_photo(caption="Here is your Thumbnail", photo=location)
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -227,23 +227,9 @@ async def next_page(bot, query):
         ]
 
     btn.insert(0,
-         [  
-            InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
-         ]
-        
-    )
-
-    btn.insert(1,
-         [
-	    InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
-         ]
-        
-    )
-    btn.insert(2,
-         [ 
+        [   
 	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
-         ]
-        
+        ]   
     )
 
     if 0 < offset <= 10:
@@ -256,24 +242,24 @@ async def next_page(bot, query):
         btn.append(
             [InlineKeyboardButton("⏪ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📃 𝗣𝗮𝗴𝗲s {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
-                                  callback_data="pages")],
-            [InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")]
+                                  callback_data="pages"),
+              InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")],
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")],
-             [InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")]
+             InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}"),
+             InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")]
              )
     else:
         btn.append(
             [
                 InlineKeyboardButton("⏪ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
-            ],
-            [InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")],
-        )
+                InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}"),
+                InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")
+            ]
+          )
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -944,22 +930,9 @@ async def auto_filter(client, msg, spoll=False):
         ]
 
     btn.insert(0,
-         [  
-            InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
-         ]
-        
-    )
-    btn.insert(1,
-         [
-	    InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
-         ]
-        
-    )
-    btn.insert(2,
-         [ 
+        [ 
 	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
-         ]
-        
+        ] 
     )
 
     if offset != "":
@@ -968,8 +941,8 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⏩", callback_data=f"next_{req}_{key}_{offset}")],
-            [InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")],
+             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⏩", callback_data=f"next_{req}_{key}_{offset}"),
+             InlineKeyboardButton("Send All", callback_data=f"next_{key}")],
 
         )
     else:
