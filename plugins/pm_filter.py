@@ -59,7 +59,7 @@ async def fil_mod(client, message):
       else:
           await m.edit("USE :- /autofilter on 𝙾𝚁 /autofilter off")
 
-@Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
@@ -226,7 +226,7 @@ async def next_page(bot, query):
             for file in files
         ]
 
-    btn.insert(0,
+    btn.insert(3,
         [
             InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
             InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
@@ -933,7 +933,11 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
-    btn.insert(0,
+    btn.insert(3,
+        [
+            InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
+            InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
+        ],
         [
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
         ]
@@ -945,7 +949,9 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⏩", callback_data=f"next_{req}_{key}_{offset}")],
+            [InlineKeyboardButton("Send All Files", callback_data=f"next_{key}")],
+
         )
     else:
         btn.append(
