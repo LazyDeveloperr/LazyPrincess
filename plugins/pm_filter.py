@@ -167,7 +167,7 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
-@Client.on_Callback_query(filters.regex('extractthumb'))
+@Client.on_callback_query(filters.regex('extractthumb'))
 async def extractthumb(bot, update):
         # type = update.data.split("_")[1]
         thumbs= update.message.video.thumbs[0]
