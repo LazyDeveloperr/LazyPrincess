@@ -8,7 +8,7 @@ from utils import get_size, temp, get_settings
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://t.me/LazyDeveloper --------------------------------------"""
+"""-------------------------------------------------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -22,11 +22,11 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url=f'https://t.me/{SUPPORT_CHAT}')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
+                text='<b>CHAT NOT ALLOWED 🐞\n\n𝙼𝚈 𝙰𝙳𝙼𝙸𝙽𝚂 𝙷𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝚃𝙴𝙳 𝙼𝙴 𝙵𝚁𝙾𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙷𝙴𝚁𝙴 !𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙾 𝙺𝙽𝙾𝚆 𝙼𝙾𝚁𝙴 𝙰𝙱𝙾𝚄𝚃 𝙸𝚃 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙾𝚆𝙽𝙴𝚁...</b>',
                 reply_markup=reply_markup,
             )
 
@@ -37,12 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🤥 Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('🔔 Updates', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('📢 UPDATES 📢', url='https://t.me/LazyDeveloper')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"<b>›› 𝚃𝙷𝙰𝙽𝙺𝚂 𝚃𝙾 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿. {message.chat.title} ❣️\n›› 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙾 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽.\n›› 𝙸f 𝙰𝙽𝚈 𝙳𝙾𝚄𝙱𝚃𝚂 𝙰𝙱𝙾𝚄𝚃 𝚄𝚂𝙸𝙽𝙶 𝙼𝙴 𝙲𝙻𝙸𝙲𝙺 𝙱𝙴𝙻𝙾𝚆 𝙱𝚄𝚃𝚃𝙾𝙽..⚡⚡.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -53,8 +53,13 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
-
+                temp.MELCOW['welcome'] = await message.reply_video(
+                video="https://telegra.ph/file/03691465baa774e46506d.mp4",                                               
+                                                 caption=f'<b>ʜᴇʏ, {u.mention} 👋🏻\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɢʀᴏᴜᴘ {message.chat.title}\n\nFind Any Media ! if you need any movie then then enter the movie name + years. 👍\n\nGuys Enter Only movie Or Webseries Name like This 👇\nPushpa ✅\nPushpa 2021 ✅\nPushpa in Hindi ❌\nLucifer ✅\nLucifer S01 ✅\nLucifer all season ❌</b>',
+                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🔥  ↭ Main Channel ↭  🔥', url='http://t.me/real_MoviesAdda2') ],
+                                                                                      [ InlineKeyboardButton('🔥  ↭ DEV Channel ↭  🔥', url='http://t.me/LazyDeveloper') ]
+                                                                                    ] )
+                )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -67,7 +72,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -106,12 +111,12 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>Hello Friends, \nMy admin has told me to leave from group, isiliye main chali 🤪 ! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
+            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
@@ -139,7 +144,7 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
+    rju = await message.reply('<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝚂𝚃𝙰𝚃𝚄𝚂 𝙳𝙴𝚃𝙰𝙸𝙻𝚂...</b>')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
@@ -199,7 +204,7 @@ async def ban_a_user(bot, message):
             return await message.reply(f"{k.mention} is already banned\nReason: {jar['ban_reason']}")
         await db.ban_user(k.id, reason)
         temp.BANNED_USERS.append(k.id)
-        await message.reply(f"Successfully banned ! Sudhrr ja babu {k.mention}")
+        await message.reply(f"Successfully banned {k.mention}")
 
 
     
@@ -223,7 +228,7 @@ async def unban_a_user(bot, message):
     except PeerIdInvalid:
         return await message.reply("This is an invalid user, make sure ia have met him before.")
     except IndexError:
-        return await message.reply("This might be a channel, make sure its a user.")
+        return await message.reply("Thismight be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
@@ -232,7 +237,7 @@ async def unban_a_user(bot, message):
             return await message.reply(f"{k.mention} is not yet banned.")
         await db.remove_ban(k.id)
         temp.BANNED_USERS.remove(k.id)
-        await message.reply(f"Successfully unbanned ! Sudhrr ja babu {k.mention}")
+        await message.reply(f"Successfully unbanned {k.mention}")
 
 
     
@@ -256,7 +261,7 @@ async def list_users(bot, message):
 
 @Client.on_message(filters.command('chats') & filters.user(ADMINS))
 async def list_chats(bot, message):
-    raju = await message.reply('Getting List Of chats Sona !')
+    raju = await message.reply('Getting List Of chats')
     chats = await db.get_all_chats()
     out = "Chats Saved In DB Are:\n\n"
     async for chat in chats:

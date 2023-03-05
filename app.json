@@ -1,7 +1,8 @@
 {
-    "name": "LazyPrincess",
-    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
+    "name": "LazyPrincessV2",
+    "description": "LazyPrincess with Url Shortner",
     "stack": "container",
+    "logo": "https://telegra.ph/file/68d28011b2bc356b5db01.png",
     "keywords": [
       "telegram",
       "auto-filter",
@@ -15,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/LazyDeveloperr/LazyPrincess",
-    "repository": "https://github.com/LazyDeveloperr/LazyPrincess",
+    "website": "https://github.com/LazyDeveloperr",
+    "repository": "https://github.com/LazyDeveloperr/LazyPrincessV2",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -55,7 +56,7 @@
             "required": false
         },
         "DATABASE_URI": {
-            "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com",
             "required": true
         },
         "DATABASE_NAME": {
@@ -64,7 +65,7 @@
         },
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
-            "value": "Telegram_files",
+            "value": "Anurag_files",
             "required": false
         }
     },

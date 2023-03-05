@@ -1,7 +1,7 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
-from imdb import IMDb
+from info import *
+from imdb import Cinemagoer
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
@@ -13,6 +13,7 @@ from typing import List
 from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
+import aiohttp
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -21,7 +22,7 @@ BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))"
 )
 
-imdb = IMDb() 
+imdb = Cinemagoer()
 
 BANNED = {}
 SMART_OPEN = '“'
@@ -39,7 +40,7 @@ class temp(object):
     U_NAME = None
     B_NAME = None
     SETTINGS = {}
-
+    
 async def is_subscribed(bot, query):
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
@@ -157,7 +158,7 @@ async def broadcast_messages(user_id, message):
 async def search_gagala(text):
     usr_agent = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-        'Chrome/109.0.5414.120 Safari/537.36'
+        'Chrome/61.0.3163.100 Safari/537.36'
         }
     text = text.replace(" ", '+')
     url = f'https://www.google.com/search?q={text}'
@@ -375,3 +376,29 @@ def humanbytes(size):
         size /= power
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
+
+async def get_shortlink(link):
+    https = link.split(":")[0]
+    if "http" == https:
+        https = "https"
+        link = link.replace("http", https)
+
+    url = f'https://api.shareus.in/shortLink'
+    params = {'token': URL_SHORTNER_WEBSITE_API,
+              'link': link,
+              'format': 'json'
+              }
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json(content_type='text/html')
+                if data["status"] == "success":
+                    return data['shortlink']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return f'https://api.shareus.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'
+
+    except Exception as e:
+        logger.error(e)
+        return f'https://api.shareus.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'

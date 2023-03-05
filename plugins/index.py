@@ -5,7 +5,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified
 from info import ADMINS, LAZY_RENAMERS
 from info import INDEX_REQ_CHANNEL as LOG_CHANNEL
-from info import LAZY_MODE 
+from info import LAZY_MODE
 from database.ia_filterdb import save_file
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from utils import temp
@@ -16,7 +16,6 @@ from info import ADMINS
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
-
 
 @Client.on_callback_query(filters.regex(r'^index'))
 async def index_files(bot, query):
@@ -81,9 +80,9 @@ async def send_for_index(bot, message):
     try:
         k = await bot.get_messages(chat_id, last_msg_id)
     except:
-        return await message.reply('Make Sure That i am An Admin In The Channel, if channel is private')
+        return await message.reply('Make Sure That Iam An Admin In The Channel, if channel is private')
     if k.empty:
-        return await message.reply('This may be group and i am not a admin of the group.')
+        return await message.reply('This may be group and iam not a admin of the group.')
 
     if message.from_user.id in ADMINS:
         if (LAZY_MODE==True):
@@ -120,13 +119,13 @@ async def send_for_index(bot, message):
     if type(chat_id) is int:
         try:
             link = (await bot.create_chat_invite_link(chat_id)).invite_link
-        except ChatAdminRequired: 
-            return await message.reply('Make sure i am an admin in the chat and have permission to invite users.')
+        except ChatAdminRequired:
+            return await message.reply('Make sure iam an admin in the chat and have permission to invite users.')
     else:
         link = f"@{message.forward_from_chat.username}"
     buttons = [
         [
-            InlineKeyboardButton('Request Index',
+            InlineKeyboardButton('Accept Index',
                                  callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')
         ],
         [
@@ -176,8 +175,6 @@ async def send_for_index(bot, message):
     else:
         await message.reply('🎉\n\n\n❤️ Thank You For the Contribution, Wait For My Moderators to verify the files.\n\n\n🎁')
  
-
-
 
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))
 async def set_skip_number(bot, message):
