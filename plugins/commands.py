@@ -250,6 +250,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/@LazyDeveloperr')] ] ),
         protect_content=True if pre == 'filep' else False,
         )
+    await message.answer(f"To get direct access to the requested content, please join our official channel using the link below:\n\n༺@real_MoviesAdda", show_alert=True)
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
