@@ -226,11 +226,13 @@ async def next_page(bot, query):
             for file in files
         ]
 
-    btn.insert(1,
+    btn.insert(0,
         [
             InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
             InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
-        ],
+        ]
+    )
+    btn.insert(1,
         [
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
         ]
@@ -933,11 +935,13 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
-    btn.insert(1,
+    btn.insert(0,
         [
             InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
             InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
-        ],
+        ]
+    )
+    btn.insert(1,
         [
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
         ]
