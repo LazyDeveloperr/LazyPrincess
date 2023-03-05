@@ -229,7 +229,11 @@ async def next_page(bot, query):
     btn.insert(0,
         [ 
 	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
+        ],
+         [    InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
+            InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
         ]
+        
     )
 
     if 0 < offset <= 10:
@@ -932,7 +936,11 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0,
         [ 
 	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
+        ],
+         [  InlineKeyboardButton(text="Movie Channel", url='https://telegram.me/real_MoviesAdda2'),
+            InlineKeyboardButton(text="Updates", url='https://telegram.me/LazyDeveloper')
         ]
+        
     )
 
     if offset != "":
