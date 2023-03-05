@@ -69,6 +69,8 @@ LAZY_MODE = bool(environ.get("LAZY_MODE"))
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL'))
+lazy_goups = environ.get('LAZY_GROUPS','-1001883992600')
+LAZY_GROUPS = [int(lazygroups) for lazygroups in lazy_goups.split()] if lazy_goups else None
 
 # URL Shortener
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'api.shareus.in/shortLink')
