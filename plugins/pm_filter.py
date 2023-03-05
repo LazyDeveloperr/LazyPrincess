@@ -926,7 +926,7 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
-            if msg.message.chat.id in LAZY_GROUPS:
+            if message.chat.id in LAZY_GROUPS:
                 btn = [
                     [
                         InlineKeyboardButton(
@@ -946,7 +946,7 @@ async def auto_filter(client, msg, spoll=False):
                     for file in files
                 ]
     else:
-        if msg.message.chat.id in LAZY_GROUPS:
+        if message.chat.id in LAZY_GROUPS:
             btn = [
                 [
                     InlineKeyboardButton(
