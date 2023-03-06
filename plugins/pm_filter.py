@@ -178,6 +178,26 @@ async def extractthumb(bot, update):
         await z.delete()
         await update.message.reply_photo(caption="Here is your Thumbnail", photo=location)
 
+
+def startx(update, context):
+    # Create an inline keyboard with a button to send files
+    keyboard = [[InlineKeyboardButton("Send Files", callback_data='send_files')]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    update.message.reply_text('Click the button to send files:', reply_markup=reply_markup)
+
+# Define a function to handle the button press
+def button(update, context):
+    query = update.callback_query
+    # Get the button data ("send_files")
+    button_data = query.data
+    # Send all files in the "files" directory to the user
+    if button_data == 'send_files':
+        files_directory = './files'
+        file_paths = [os.path.join(files_directory, f) for f in os.listdir(files_directory)]
+        for file_path in file_paths:
+            context.bot.send_document(chat_id=query.message.chat_id, document=open(file_path, 'rb'))
+
+
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -264,14 +284,14 @@ async def next_page(bot, query):
             [InlineKeyboardButton("⏪ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📃 𝗣𝗮𝗴𝗲s {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages"),
-            InlineKeyboardButton("🦋Send All", callback_data=f"{files}")]
+            InlineKeyboardButton("🦋Send All", callback_data="send_files")]
            
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}"),
-             InlineKeyboardButton("xSend All", callback_data=f"files")]
+             InlineKeyboardButton("xSend All", callback_data="send_files")]
              )
     else:
         btn.append(
@@ -288,6 +308,7 @@ async def next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
+
 
 
 @Client.on_callback_query(filters.regex(r"^spolling"))
@@ -988,7 +1009,7 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⏩", callback_data=f"next_{req}_{key}_{offset}"),
-             InlineKeyboardButton("⚡Send All", callback_data=f"files")
+             InlineKeyboardButton("⚡Send All", callback_data="send_files")
              ]
             )
     else:
