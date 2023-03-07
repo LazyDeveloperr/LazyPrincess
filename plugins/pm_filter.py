@@ -167,13 +167,11 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
-@Client.on_callback_query(filters.regex('extractthumb'))
 async def extractthumb(bot, message):
-        thumbs = message.video.thumbs[0]
-        file_id= thumbs.file_id
-        location = await bot.download_media(file_id)
-        z = await message.reply(f'Extracting thumbnail...') 
-        await message.reply_photo(photo=location, caption="Here is your Thumbnail",)
+    file_id = message.data.split('_')[1]
+    location = await bot.download_media(file_id)
+    z = await message.reply(f'Extracting thumbnail...') 
+    await message.reply_photo(photo=location, caption="Here is your Thumbnail")
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -199,7 +197,7 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
-        if query.message.chat.id in LAZY_GROUPS:
+        if URL_MODE == True:
             btn = [
                 [
                     InlineKeyboardButton(
@@ -217,7 +215,7 @@ async def next_page(bot, query):
             ]
 
     else:
-        if query.message.chat.id in LAZY_GROUPS:
+        if URL_MODE == True:
             btn = [
                 [
                     InlineKeyboardButton(
@@ -705,29 +703,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "getlazythumbnail":
-        buttons = [
-            [
-            InlineKeyboardButton("D͢o͢n͢a͢t͢e͢ L͢a͢z͢y͢D͢e͢v͢", callback_data="thdonatelazydev"),
-            ],
-            [ InlineKeyboardButton("<- G̳O̳ ̳B̳A̳C̳K̳  ⨳", callback_data="lazyhome") ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.LZTHMB_TEXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "thdonatelazydev":
-        buttons = [
-            [ InlineKeyboardButton("<- G̳O̳ ̳B̳A̳C̳K̳  ⨳", callback_data="getlazythumbnail") ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.DNT_TEXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
     elif query.data == "getlazylink":
         buttons = [
             [
@@ -753,8 +728,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "lazyhome":
         text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n"""
-        buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="rename") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
+        buttons = [[ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
+                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb_{query.message.video.file_id}') ],
                            [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
                            [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -787,8 +762,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "reqauthlazyhome":
         text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n"""
-        buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="requireauth") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazythumbnail") ],
+        buttons = [[ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="requireauth") ],
+                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data="reqauthgetlazythumbnail") ],
                            [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazylink") ],
                            [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -920,7 +895,7 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
-            if message.chat.id in LAZY_GROUPS:
+            if URL_MODE == True:
                 btn = [
                     [
                         InlineKeyboardButton(
@@ -940,7 +915,7 @@ async def auto_filter(client, msg, spoll=False):
                     for file in files
                 ]
     else:
-        if message.chat.id in LAZY_GROUPS:
+        if URL_MODE == True:
             btn = [
                 [
                     InlineKeyboardButton(
