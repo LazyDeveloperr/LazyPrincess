@@ -6,4 +6,5 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    return web.json_response("BOT IS RUNNING -Telegram@LazyDeveloper")
+    return web.json_response("Born to make history -@LazyDeveloper")
+

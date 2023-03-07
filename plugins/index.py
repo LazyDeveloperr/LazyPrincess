@@ -83,6 +83,12 @@ async def send_for_index(bot, message):
         return await message.reply('Make Sure That Iam An Admin In The Channel, if channel is private')
     if k.empty:
         return await message.reply('This may be group and iam not a admin of the group.')
+# _______________________________________________________________________________________________________________ #
+# __________________________________________Credit_______________________________________________________________ #
+# _______________________________________LazyDeveloper___________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
+# ___________________________B O R N -- T O -- M A K E -- H I S T O R Y__________________________________________ #
+# _______________________________________________________________________________________________________________ #
 
     if message.from_user.id in ADMINS:
         if (LAZY_MODE==True):
@@ -91,8 +97,7 @@ async def send_for_index(bot, message):
             filesize = humanize.naturalsize(file.file_size) 
             buttons = [
                 [ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
-                [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb') ],
-                [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢", callback_data="getlazylink") ],
                 [ InlineKeyboardButton('📇✧✧ S𝚝ar𝚝 indeＸi𝚗g ✧✧📇',callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')],
                 [ InlineKeyboardButton('⨳  C L Ф S Ξ  ⨳', callback_data='cancel'),]
             ]
@@ -141,9 +146,8 @@ async def send_for_index(bot, message):
         if message.from_user.id in LAZY_RENAMERS:
             k = await message.reply('🎉\n\n\n❤️ Thank You For the Contribution, Wait For My Moderators to verify the files.\n\n\n🎁')
             buttons = [
-                        [InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="rename") ],
-                        [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb') ],
-                        [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                        [InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
+                        [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢", callback_data="getlazylink") ],
                         [InlineKeyboardButton('⨳  C L Ф S Ξ  ⨳', callback_data='cancel')]]
             reply_markup = InlineKeyboardMarkup(buttons)
             file = getattr(message, message.media.value)
@@ -158,9 +162,8 @@ async def send_for_index(bot, message):
         else :      
             await message.reply('🎉\n\n\n❤️ Thank You For the Contribution, Wait For My Moderators to verify the files.\n\n\n🎁')
             buttons = [
-                        [InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="requireauth") ],
-                        [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data="reqauthgetlazythumbnail") ],
-                        [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                        [InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="requireauth") ],
+                        [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ", callback_data="getlazylink") ],
                         [InlineKeyboardButton('⨳  C L Ф S Ξ  ⨳', callback_data='cancel')]]
             reply_markup = InlineKeyboardMarkup(buttons)
             file = getattr(message, message.media.value)
@@ -239,3 +242,9 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
             await msg.edit(f'Error: {e}')
         else:
             await msg.edit(f'Succesfully saved <code>{total_files}</code> to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nNon-Media messages skipped: <code>{no_media + unsupported}</code>(Unsupported Media - `{unsupported}` )\nErrors Occurred: <code>{errors}</code>')
+# _______________________________________________________________________________________________________________ #
+# __________________________________________Credit_______________________________________________________________ #
+# _______________________________________LazyDeveloper___________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
+# ___________________________B O R N -- T O -- M A K E -- H I S T O R Y__________________________________________ #
+# _______________________________________________________________________________________________________________ #

@@ -735,8 +735,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "lazyhome":
         text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n"""
         buttons = [[ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb_{query.message.video.file_id.hex()}') ],
-                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ", callback_data="getlazylink") ],
                            [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -753,24 +752,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "reqauthgetlazythumbnail":
-        buttons = [
-            [
-            InlineKeyboardButton("D͢o͢n͢a͢t͢e͢ L͢a͢z͢y͢D͢e͢v͢", callback_data="thdonatelazydev"),
-            ],
-            [ InlineKeyboardButton("<- G̳O̳ ̳B̳A̳C̳K̳  ⨳", callback_data="reqauthlazyhome") ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.LZTHMB_TEXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+
     elif query.data == "reqauthlazyhome":
         text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n"""
         buttons = [[ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="requireauth") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data="reqauthgetlazythumbnail") ],
-                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazylink") ],
+                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢", callback_data="reqauthgetlazylink") ],
                            [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1140,9 +1126,12 @@ async def manual_filters(client, message, text=False):
    
 
 
-
-
-
+# _______________________________________________________________________________________________________________ #
+# __________________________________________Credit_______________________________________________________________ #
+# _______________________________________LazyDeveloper___________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
+# ___________________________B O R N -- T O -- M A K E -- H I S T O R Y__________________________________________ #
+# _______________________________________________________________________________________________________________ #
 
 
 # ____________________________ send all Files ______________________________#
@@ -1164,3 +1153,11 @@ async def manual_filters(client, message, text=False):
 #         file_paths = [os.path.join(files_directory, f) for f in os.listdir(files_directory)]
 #         for file_path in file_paths:
 #             context.bot.send_document(chat_id=query.message.chat_id, document=open(file_path, 'rb'))
+
+
+# _______________________________________________________________________________________________________________ #
+# __________________________________________Credit_______________________________________________________________ #
+# _______________________________________LazyDeveloper___________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
+# ___________________________B O R N -- T O -- M A K E -- H I S T O R Y__________________________________________ #
+# _______________________________________________________________________________________________________________ #
