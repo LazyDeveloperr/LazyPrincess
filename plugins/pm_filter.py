@@ -167,11 +167,14 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
+@Client.on_callback_query(filters.regex(r'extractthumb_(.+)'))
 async def extractthumb(bot, message):
-    file_id = message.data.split('_')[1]
+    file_id_hex = message.data.split('_')[1]
+    file_id = bytes.fromhex(file_id_hex)
     location = await bot.download_media(file_id)
     z = await message.reply(f'Extracting thumbnail...') 
     await message.reply_photo(photo=location, caption="Here is your Thumbnail")
+
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -729,7 +732,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "lazyhome":
         text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n"""
         buttons = [[ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb_{query.message.video.file_id}') ],
+                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢", callback_data=f'extractthumb_{query.message.video.file_id.hex()}') ],
                            [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
                            [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
         reply_markup = InlineKeyboardMarkup(buttons)
