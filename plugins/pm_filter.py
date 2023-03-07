@@ -167,7 +167,7 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
-@Client.on_callback_query('extractthumb')
+@Client.on_callback_query(filters.regex('extractthumb'))
 async def extractthumb(bot, message):
     file = message.reply_to_message
     media = getattr(file.media.value)
