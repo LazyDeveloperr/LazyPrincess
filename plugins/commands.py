@@ -524,3 +524,12 @@ async def save_template(client, message):
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚄𝙿𝙶𝚁𝙰𝙳𝙴𝙳 𝚈𝙾𝚄𝚁 𝚃𝙴𝙼𝙿𝙻𝙰𝚃𝙴 𝙵𝙾𝚁 {title} to\n\n{template}")
+
+
+
+
+
+
+
+
+

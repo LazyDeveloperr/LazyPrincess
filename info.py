@@ -60,16 +60,21 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True
 # _______________________________________________________________________________________________________________ #
 # __________________________________________Credit_______________________________________________________________ #
 # _______________________________________LazyDeveloper___________________________________________________________ #
-# _______________________________________________________________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
 
 #LazyRenamer Configs
 FLOOD = int(environ.get("FLOOD", "10"))
+# FLOOD is for renaming files -> set value in [seconds] in this field ! ex : for 30 seconds use 30 --\\ for 1 minute use 60 -------- ! 
 LAZY_MODE = bool(environ.get("LAZY_MODE"))
-#Add user id of the user in this field those who you want to be Authentic user for file renaming features
+#Add user id of the user in this field those who you want to be Authentic user for file renaming features --------- !
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
+# Only Give Value in LAZY_RENAMERS if you have enabled LAZY_MODE ----- !
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL'))
-URL_MODE = bool(environ.get("URL_MODE", "True"))
+#   REQ_CHANNEL is for the logs of that content name which is not found in group -- !
+URL_MODE = is_enabled((environ.get("URL_MODE")), True)
+# Use True false in url mode => Set value true if you want shortlinks - else - use value False ----- !
+
 # URL Shortener
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'api.shareus.in/shortLink')
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'I3Khu0fwfbWpd1W2ofcyP2znDA12')
@@ -91,7 +96,7 @@ CAPTION_BUTTON_URL = "https://t.me/LazyDeveloper"
 # _______________________________________________________________________________________________________________ #
 # __________________________________________Credit_______________________________________________________________ #
 # _______________________________________LazyDeveloper___________________________________________________________ #
-# _______________________________________________________________________________________________________________ #
+# _____________________________A real Developer always gives Credits_____________________________________________ #
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
