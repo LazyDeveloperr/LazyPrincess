@@ -167,13 +167,16 @@ async def doc(bot, update):
     if ph_path:
        os.remove(ph_path) 
 
-@Client.on_callback_query(filters.regex(r'extractthumb_(.+)'))
+@Client.on_callback_query('extractthumb')
 async def extractthumb(bot, message):
-    file_id_hex = message.data.split('_')[1]
-    file_id = bytes.fromhex(file_id_hex)
-    location = await bot.download_media(file_id)
-    z = await message.reply(f'Extracting thumbnail...') 
-    await message.reply_photo(photo=location, caption="Here is your Thumbnail")
+    file = message.reply_to_message
+    media = getattr(file.media.value)
+    th_path = await bot.download_media(media.thumbs[0].file_id)
+    # thumbs= message.video.thumbs[0]
+    # file_id= thumbs.file_id
+    # location=await bot.download_media(file_id)
+    await message.reply(f'Extracting thumbnail...') 
+    await message.reply_photo(photo=th_path, caption="Here is your Thumbnail")
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
