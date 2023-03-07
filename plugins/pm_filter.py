@@ -169,7 +169,7 @@ async def doc(bot, update):
 
 @Client.on_callback_query(filters.regex('extractthumb'))
 async def extractthumb(bot, message):
-    file = message.reply_to_message
+    file = message.reply_to_message.id
     media = getattr(file.media.value)
     th_path = await bot.download_media(media.thumbs[0].file_id)
     # thumbs= message.video.thumbs[0]
