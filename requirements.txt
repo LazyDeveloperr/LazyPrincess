@@ -1,4 +1,3 @@
-git+https://github.com/Joelkb/cinemagoer
 pyrogram==2.0.35
 tgcrypto
 pymongo[srv]==3.12.3
@@ -7,14 +6,13 @@ marshmallow==3.14.1
 umongo==3.0.1
 requests
 bs4
-heroku3
-pynewtonmath
-pytz
-aiohttp
 imdbpy==2022.7.9
+aiohttp
+pytz
 hachoir
 Pillow
 humanize
 aiofiles
-dnspython 
+dnspython
 pynewtonmath
+openai

@@ -26,7 +26,7 @@ async def answer(bot, query):
     if not await inline_users(query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='okDa',
+                           switch_pm_text='Results',
                            switch_pm_parameter="hehe")
         return
 
@@ -68,7 +68,7 @@ async def answer(bot, query):
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
-                document_file_id=file.file_id,
+                file_id=file.file_id,
                 caption=f_caption,
                 description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
