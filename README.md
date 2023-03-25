@@ -8,6 +8,7 @@
 ## ⚡️Features
 
 - [x] 🔥 New feature :
+    - [+] ⚡️ Added `Artificial Inteligence` feature and many more feature ⚡️
     - [+] ⚡️ Added `file renaming` feature ⚡️
       - super premium repo...
     - [+] ⚡️ Support 2GB + Files ⚡️
