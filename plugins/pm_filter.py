@@ -1154,7 +1154,7 @@ async def auto_filter(client, msg, spoll=False):
                         for file in files
                         ]
                 else:
-                    btn = [{pre}
+                    btn = [
                         [
                             InlineKeyboardButton(
                                 text=f"[{get_size(file.file_size)}] {file.file_name}", 
