@@ -1,7 +1,5 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ForceReply
-from pyrogram import Client, filters, enums
 from info import *
 from imdb import IMDb
 import asyncio
@@ -16,12 +14,9 @@ from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
 import aiohttp
-import openai
-openai.api_key = OPENAI_API
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-
 
 BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))"
@@ -426,5 +421,5 @@ async def lazy_answer(client, message):
     reply_markup=InlineKeyboardMarkup(btn)
     footer_credit = "❚█══<a href='https://telegram.me/LazyDeveloperSupport'>𝘙𝘌𝘗𝘖𝘙𝘛 𝘐𝘚𝘚𝘜𝘌</a>═══════\n❚█══<a href='https://telegram.me/LazyDeveloperr'>𝘊𝘖𝘕𝘛𝘈𝘊𝘛 𝘔𝘈𝘚𝘛𝘌𝘙</a>═══════"
     lazy_response = response.choices[0].text 
-    await client.send_message(LAZY_AI_LOGS, text=f"⚡️#Lazy_AI_Query \n\n• A user named **{message.from_user.mention}** with user id - `{user_id}`. Asked me this query...\n\n══❚█══Q࿐U࿐E࿐R࿐Y══█❚══\n\n[Q྿.]**{lazy_users_message}**\n\n◔̯◔Here is what i responded:\n[A྿.] `{lazy_response}`\n\n\n█❚═USER ID═❚═• `{user_id}` \n█❚═USER Name═❚═• `{message.from_user.mention}` \n\n🗃️" , reply_markup = reply_markup )
+    await client.send_message(LAZY_AI_LOGS, text=f"⚡️#Lazy_AI_Query \n\n• A user named **{message.from_user.mention}** with user id - `{user_id}`. Asked me this query...\n\══❚█══Q࿐U࿐E࿐R࿐Y══█❚══\n\n[Q྿.]**{lazy_users_message}**\n\n◔̯◔Here is what i responded:\n[A྿.] `{lazy_response}`\n\n\n █❚═USER ID═❚═• `{user_id}` \n█❚═USER Name═❚═• `{message.from_user.mention}` \n\n🗃️" , reply_markup = reply_markup )
     await message.reply(f"{lazy_response}\n\n\n{footer_credit}")

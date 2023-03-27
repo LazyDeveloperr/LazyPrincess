@@ -45,6 +45,8 @@ Read [this](https://telegram.dog/LazyDevelopers/8) before you start messing up w
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
 * `LAZY_MODE`: True or False . If true then bot will rename files else it will not rename.
 * `LAZY_RENAMERS`: ID of the users to which you want to give file renaming authentication. Separate multiple ids by space.
+
+
 * Check [info.py](https://github.com/LazyDeveloperr/LazyPrincess/blob/master/info.py) for more
 
 
@@ -52,7 +54,7 @@ Read [this](https://telegram.dog/LazyDevelopers/8) before you start messing up w
 You can deploy this bot anywhere.
 
 
-<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/LazyDeveloperr/LazyPrincess&branch=artificial_inteligence_v7.5&name=lazyprincessbot7.5"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
+<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/LazyDeveloperr/LazyPrincess&branch=master&name=lazyprincessbot"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
 
 
 <details><summary>Deploy To Heroku</summary>
@@ -120,8 +122,6 @@ python3 bot.py
 
 ## Thanks to 
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for helping us in this journey ❤
- - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for adding A.1 feature.❤
- - Thanks to OpenAi ❤- `ith love from @LazyDeveloperr`
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for adding `file renaming feature` 🎉
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for keeping this `super premium repo` for `free` ❤
  - Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
