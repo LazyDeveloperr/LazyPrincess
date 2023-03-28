@@ -1,6 +1,8 @@
     # Credit @LazyDeveloper.
     # Please Don't remove credit.
     # Thank you LazyDeveloper for helping us in this Journey
+import os
+req_channel = int(os.environ.get('REQ_CHANNEL', '-100828829383'))
 import asyncio
 import re
 import ast
