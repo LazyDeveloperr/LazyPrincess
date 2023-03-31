@@ -15,3 +15,4 @@ humanize
 aiofiles
 dnspython
 pynewtonmath
+openai
