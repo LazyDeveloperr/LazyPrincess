@@ -560,7 +560,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("Mere saamne jyada smart nhi banne ka sona 😒", show_alert=True)
+            await query.answer("yᴏᴜʀ ꜱᴍᴀʀᴛɴᴇꜱꜱ ɪꜱ ɢᴏᴏᴅ ʙᴜᴛ ᴅᴏɴ'ᴛ ꜱʜᴏᴡ ᴏᴠᴇʀ ꜱᴍᴀʀᴛ 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -590,9 +590,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
+        buttons = [
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
+0[
             InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
         ], [
