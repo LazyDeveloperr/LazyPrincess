@@ -22,7 +22,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ', url=f'https://t.me/{SUPPORT_CHAT}')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -37,12 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🤥 Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('🔔 Updates', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('◽️ʜᴇʟᴩ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('◽️ᴍᴏᴠɪᴇ ɢʀᴏᴜᴩ', url='https://t.me/+9CKK8DlZlgUxOTE9')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"<b>ᴛʜᴀɴᴋyᴏᴜ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ❣️\n\nɪꜰ yᴏᴜ ʜᴀᴠᴇ ᴀɴy qᴜᴇꜱᴛɪᴏɴ & ᴅᴏᴜʙᴛꜱ ᴀʙᴏᴜᴛ ᴜꜱɪɴɢ ᴍᴇ ᴄᴏɴᴛᴀᴄᴛ ꜱᴜᴩᴩᴏʀᴛ.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
