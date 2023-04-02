@@ -749,7 +749,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]]
             reply_markup_lzdv = InlineKeyboardMarkup(btn_lzdv) 
             reply_markup = InlineKeyboardMarkup(btn)
-            await client.send_message(int(user_id), f"✅ Hey sona, Your requested content named `{movie}` is now available in our database! You can easily get this movie by searching it's correct name in our official group...\n\n❤ Thank You for the contribution", reply_markup=reply_markup)
+            await client.send_message(int(user_id), f"✅ Hey dude, Your requested content named `{movie}` is now available in our database! You can easily get this movie by searching it's correct name in our official group...\n\n❤ Thank You for the contribution", reply_markup=reply_markup)
             await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Upload done ✅.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋", reply_markup=reply_markup_lzdv)
         # Delete callback query message
             await query.answer()
@@ -789,7 +789,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ 🔎", url=f"https://telegram.me/lzymovie")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
@@ -802,7 +802,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]]
             reply_markup_lzdv = InlineKeyboardMarkup(btn_lzdv) 
             reply_markup = InlineKeyboardMarkup(btn)
-            await client.send_message(int(user_id), f"🌍 Your spelling matters.\nThe requested content `{movie}` is available in our database, You were unable to get it because of your spelling mistake.🧐 Please make sure you've spelled correctly while searching content in group...\n\n❤Thank u for supporting us.", reply_markup=reply_markup)
+            await client.send_message(int(user_id), f"⚠️**ꜱᴩᴇʟʟɪɴɢ ᴇʀʀᴏʀ**\n\nനിങ്ങൾ ഇപ്പോൾ ചോദിച്ച **`{movie}`** സിനിമ ഗ്രൂപ്പിൽ ഉണ്ട്. പക്ഷെ നിങ്ങൾ SPELLING തെറ്റി ആണ് ചോദിച്ചത്. Spelling ശെരിയാക്കി വീണ്ടും ചോദിക്കുക\n\nᴛʜᴇ **`{movie}`** ᴍᴏᴠɪᴇ yᴏᴜ ᴊᴜꜱᴛ ᴀꜱᴋᴇᴅ ᴀʙᴏᴜᴛ ɪꜱ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴩ. ʙᴜᴛ yᴏᴜ ꜱᴩᴇʟʟᴇᴅ ɪᴛ ᴡʀᴏɴɢ. ᴄᴏʀʀᴇᴄᴛ ᴛʜᴇ ꜱᴩᴇʟʟɪɴɢ ᴀɴᴅ ᴀꜱᴋ ᴀɢᴀɪɴ", reply_markup=reply_markup)
             await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Spelling error 🖊.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_lzdv)
         # Delete callback query message
             await query.answer()
