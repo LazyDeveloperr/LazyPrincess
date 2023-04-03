@@ -682,7 +682,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/+9CKK8DlZlgUxOTE9")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
@@ -710,7 +710,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/+9CKK8DlZlgUxOTE9")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
@@ -736,7 +736,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/+9CKK8DlZlgUxOTE9")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
@@ -763,7 +763,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url=f"https://telegram.me/+9CKK8DlZlgUxOTE9")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
@@ -789,7 +789,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ 🔎", url=f"https://telegram.me/lzymovie")
+                InlineKeyboardButton(text=f"🔍 ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ 🔎", url=f"https://telegram.me/+9CKK8DlZlgUxOTE9")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴩᴏʀᴛ ɪꜱꜱᴜᴇꜱ 🐞", url=f"https://telegram.me/GT_ben")
             ],[
