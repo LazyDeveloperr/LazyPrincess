@@ -247,7 +247,7 @@ async def next_page(bot, query):
                     for file in files
                 ]
         else:
-            if query.form_user.id in ADMINS:
+            if query.from_user.id in ADMINS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -1204,7 +1204,7 @@ async def auto_filter(client, msg, spoll=False):
                     for file in files
                 ]
         else:
-            if message.form_user.id in ADMINS:
+            if message.from_user.id in ADMINS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
