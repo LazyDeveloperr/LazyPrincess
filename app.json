@@ -16,7 +16,7 @@
       "inline"
     ],
     "website": "https://github.com/LazyDeveloperr/LazyPrincess",
-    "repository": "https://github.com/Vicky9745/LazyNew",
+    "repository": "https://github.com/Vikramved/LazyNew",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
