@@ -1288,12 +1288,12 @@ async def auto_filter(client, msg, spoll=False):
             
         except Exception as e:
             logger.exception(e)
-            n = await message.reply_photo(photo='https://telegra.ph/file/1e7053b9292bb4b8ed80a.jpg, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            n = await message.reply_photo(photo='https://telegra.ph/file/1e7053b9292bb4b8ed80a.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
                 await n.delete()         
     else:
-        p = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        p = await message.reply_photo(photo='https://telegra.ph/file/1e7053b9292bb4b8ed80a.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(250)
         await p.delete()
         if SELF_DELETE:
