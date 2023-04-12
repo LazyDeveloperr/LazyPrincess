@@ -237,8 +237,9 @@ async def start(client, message):
                         InlineKeyboardButton('💞 sʜᴀʀᴇ', url="https://t.me/share/url?url=<b>😱%20ᴍᴏᴠɪᴇ%20ʙᴏꜱꜱ.²·⁰%20😱%0A%0Aഏത്%20അർധരാത്രി%20ചോദിച്ചാലും%20പടം%20കിട്ടും,%20ലോകത്തിലെ%20ഒട്ടുമിക്ക%20ഭാഷകളിലുമുള്ള%20സിനിമകളുടെ%20കളക്ഷൻ..%20❤️%0A%0A👇%20GROUP%20LINK%20👇%0A@MovieBossTG%0A@MovieBossTG%0A@MovieBossTG<\b>")
                     ],
                     [
-                        InlineKeyboardButton('🌿 ғɪʟᴇ sɪᴢᴇ {file_size}', callback_data="gexneo")
-                    ]]
+                        InlineKeyboardButton(text=f'🌿 ғɪʟᴇ sɪᴢᴇ {size}', callback_data="gxneo")
+                    ]
+                    ]
                     
                                              
     await client.send_cached_media(
