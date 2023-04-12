@@ -246,6 +246,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         reply_markup=reply_markup,
+        parse_mode=enums.ParseMode.HTML,
         protect_content=True if pre == 'filep' else False,
         )
                     
