@@ -240,13 +240,12 @@ async def start(client, message):
                         InlineKeyboardButton(text=f'🌿 ғɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data="gxneo")
                     ]
                     ]
-    reply_markup = InlineKeyboardMarkup(buttons)
+    reply_markup=InlineKeyboardMarkup(buttons)
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
         reply_markup=reply_markup,
-        parse_mode=enums.ParseMode.HTML,
         protect_content=True if pre == 'filep' else False,
         )
                     
