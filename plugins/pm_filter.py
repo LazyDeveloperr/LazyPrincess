@@ -263,10 +263,13 @@ async def next_page(bot, query):
                     ]
                     for file in files
                 ]
+    
     btn.insert(0,
         [ 
-	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
-        ] 
+	    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'moviee'),
+            InlineKeyboardButton(f'ɪɴғᴏ', 'infoo'),
+            InlineKeyboardButton(f'sᴇʀɪᴇs', 'seriess')
+        ]
     )
 
     if 0 < offset <= 10:
