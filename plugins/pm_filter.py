@@ -613,6 +613,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	
     elif query.data == "seriess":
         await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ʟᴏᴋɪ S01 E01\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n© ᴍᴏᴠɪᴇʙᴏꜱꜱ", show_alert=True)
+
+    elif query.data == "ownn":
+        await query.answer("⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟\n\n• ꜰᴜʟʟ ɴᴀᴍᴇ : ꜱʜᴀʜɪᴅ²ᵒ\n• ᴜꜱᴇʀɴᴀᴍᴇ : GT_ben\n\n⍟───[☘︎𒊹︎︎︎☘︎𒊹︎︎︎☘︎𒊹︎︎︎☘︎𒊹︎︎︎☘︎𒊹︎︎︎☘︎]───⍟", show_alert=True)
 	
     elif query.data == "help":
         buttons = [[
@@ -635,7 +638,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs ʙᴜᴛᴛᴏɴs', callback_data='start'),
             ],[
-            InlineKeyboardButton('👑 ᴏᴡɴᴇʀ', url='https://t.me/GT_ben'),
+            InlineKeyboardButton('👑 ᴏᴡɴᴇʀ', callback_data="ownn"),
             InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/+9CKK8DlZlgUxOTE9')
             ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/MovieBossTG'),
