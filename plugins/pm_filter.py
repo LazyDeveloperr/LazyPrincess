@@ -593,13 +593,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('◽️ᴏᴡɴᴇʀ', url='https://t.me/GT_ben'),
-            InlineKeyboardButton('◽️ᴍᴏᴠɪᴇ ɢʀᴏᴜᴩ', url='https://t.me/+9CKK8DlZlgUxOTE9')
-        ], [
-            InlineKeyboardButton('◽️ʜᴇʟᴩ', callback_data='help'),
-            InlineKeyboardButton('◽️ᴀʙᴏᴜᴛ', callback_data='about')
-        ]]
+        buttons = [
+            [InlineKeyboardButton('⚡️ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴꜱ⚡️', callback_data="about")]
+        ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
