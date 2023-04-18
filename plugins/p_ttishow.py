@@ -1,7 +1,7 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, WELCOME_PIC, WELCOME_TEXT
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
@@ -49,11 +49,16 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 if (temp.MELCOW).get('welcome') is not None:
-                    try:
-                        await (temp.MELCOW['welcome']).delete()
-                    except:
-                        pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                try:
+                    await (temp.MELCOW['welcome']).delete()
+                except:
+                    pass
+            if WELCOM_PIC:
+                temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title),
+                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🇦🇺 ᴇɴɢ", callback_data="engwlc"),InlineKeyboardButton("🇮🇳 ʜɴᴅ", callback_data="hndwlc"),InlineKeyboardButton("🇸🇦 ᴀʀʙ", callback_data="arbwlc")]]))
+            else:
+                temp.MELCOW['welcome'] = await message.reply_text(text=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title),
+                                                                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("hi", callback_data="close_data")]]))
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
