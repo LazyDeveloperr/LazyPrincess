@@ -49,8 +49,8 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 if (temp.MELCOW).get('welcome') is not None:
-                try:
-                    await (temp.MELCOW['welcome']).delete()
+                    try:
+                        await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
             if WELCOM_PIC:
