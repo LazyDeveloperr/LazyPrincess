@@ -55,7 +55,7 @@ async def save_group(bot, message):
                     pass
             if WELCOM_PIC:
                 temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title),
-                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🇦🇺 ᴇɴɢ", callback_data="engwlc"),InlineKeyboardButton("🇮🇳 ʜɴᴅ", callback_data="hndwlc"),InlineKeyboardButton("🇸🇦 ᴀʀʙ", callback_data="arbwlc")]]))
+                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🇦🇺 ᴇɴɢ", callback_data="engwlc"),InlineKeyboardButton("🇮🇳 ʜɴᴅ", callback_data="hndwlc"),InlineKeyboardButton("🇸🇦 ᴀʀʙ", callback_data="arbwlc")],[InlineKeyboardButton("📍 ʀᴜʟᴇꜱ 📍", url="http://t.me/DrMasterTGbot?start=regole_-1001397638909")]]))
             else:
                 temp.MELCOW['welcome'] = await message.reply_text(text=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title),
                                                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("hi", callback_data="close_data")]]))
