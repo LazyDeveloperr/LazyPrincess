@@ -75,8 +75,8 @@ MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "MoviesandWebseriesre
 
 # Url Shortner
 URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'Mdiskshortner.link') #Always use website url from api section 
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'd9a38b0289a28e5d06747e6248400cea05e7ba05')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', '') #Always use website url from api section 
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '')
 LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5980613692').split()]
 
 # Auto Delete For Group Message (Self Delete) #
