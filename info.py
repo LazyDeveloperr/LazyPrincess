@@ -38,13 +38,13 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001972152639))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001650508234')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001959208957')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "⚡<b>File uploaded by [Movies Adaa™](https://t.me/real_MoviesAdda2)</b>⚡\n\n🎦 <b>File Name: </b> ➥  <i>{file_caption}</i>\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n                ❤️<b>WE LOVE YOU</b>❤️\n🔥  ↭ <b>Join Now [MoviesAdda™](https://t.me/real_MoviesAdda2)</b> ↭  🔥")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "⚡<b>File uploaded by [Movies Adaa™](https://t.me/+yyijzRAlsCszZDdl)</b>⚡\n\n🎦 <b>File Name: </b> ➥  <i>{file_caption}</i>\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n                ❤️<b>WE LOVE YOU</b>❤️\n🔥  ↭ <b>Join Now [MoviesAdda™](https://t.me/+yyijzRAlsCszZDdl)</b> ↭  🔥")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌‌‌‌IMDb Data by: @LazyDeveloper \n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 \n\n♥️ we are nothing without you ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌‌‌‌IMDb Data by: @Krishna527062 \n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 \n\n♥️ we are nothing without you ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
@@ -58,26 +58,26 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), Fals
 FLOOD = int(environ.get("FLOOD", "10"))
 LAZY_MODE = bool(environ.get("LAZY_MODE"))
 #Add user id of the user in this field those who you want to be Authentic user for file renaming features
-lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '').split()]
+lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '5980613692').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL'))
 
 #ai
 AI = is_enabled((environ.get("AI","True")), False)
-OPENAI_API = environ.get("OPENAI_API","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")
+OPENAI_API = environ.get("OPENAI_API","")
 LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001308323615")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
 # Requested Content template variables ---
-ADMIN_USRNM = environ.get('ADMIN_USRNM','real_heros') # WITHOUT @
-MAIN_CHANNEL_USRNM = environ.get('MAIN_CHANNEL_USRNM','Channel_UserName') # WITHOUT @
-DEV_CHANNEL_USRNM = environ.get('DEV_CHANNEL_USRNM','LayDeveloperr') # WITHOUT @
-LAZY_YT_HANDLE = environ.get('LAZY_YT_HANDLE','LayDeveloperr')  # WITHOUT @ [  add only handle - don't add full url  ] 
+ADMIN_USRNM = environ.get('ADMIN_USRNM','Krishna527062') # WITHOUT @
+MAIN_CHANNEL_USRNM = environ.get('MAIN_CHANNEL_USRNM','Infinity_BotX') # WITHOUT @
+DEV_CHANNEL_USRNM = environ.get('DEV_CHANNEL_USRNM','Krishna527062') # WITHOUT @
+LAZY_YT_HANDLE = environ.get('LAZY_YT_HANDLE','moviekingdom522')  # WITHOUT @ [  add only handle - don't add full url  ] 
 MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "MoviesandWebseriesrequestgroup1") #[ without @ ]
 
 # Url Shortner
 URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'Mdiskshortner.link') #Always use website url from api section 
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'd9a38b0289a28e5d06747e6248400cea05e7ba05')
-LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5965340120').split()]
+LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5980613692').split()]
 
 # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
@@ -89,7 +89,7 @@ DOWNLOAD_TEXT_URL = "https://t.me/LazyDeveloper"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/LazyDeveloper"
+CAPTION_BUTTON_URL = "https://t.me/c/1650508234/318"
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
