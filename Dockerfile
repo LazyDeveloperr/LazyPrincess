@@ -1,12 +1,11 @@
-FROM python:3.8-slim-buster
+FROM python:3.10-slim-buster
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
+RUN apt update && apt upgrade -y && apt install git -y
 COPY requirements.txt /requirements.txt
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r requirements.txt
 RUN mkdir /LazyPrincess
 WORKDIR /LazyPrincess
 COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+EXPOSE 3000
+CMD ["cyclic.sh", "/start.sh"]
