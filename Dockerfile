@@ -7,5 +7,5 @@ RUN pip3 install --upgrade pip && pip3 install -r requirements.txt
 RUN mkdir /LazyPrincess
 WORKDIR /LazyPrincess
 COPY start.sh /start.sh
-EXPOSE 3000
+EXPOSE 800
 CMD ["cyclic.sh", "/start.sh"]
