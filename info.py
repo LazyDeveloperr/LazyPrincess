@@ -77,7 +77,7 @@ MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "MoviesWebseriesHolly
 URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'omegalinks.in') #Always use website url from api section 
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '0dbbadb49d51193a7cb2dd47a6d08a83b0b43a14')
-LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '').split()]
+LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5787509903').split()]
 
 # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
@@ -89,7 +89,7 @@ DOWNLOAD_TEXT_URL = "https://t.me/Infinity_XBotz/5"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/c/1650508234/318"
+CAPTION_BUTTON_URL = "https://t.me/Infinity_XBotz"
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
