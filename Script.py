@@ -8,7 +8,7 @@ Glad to see you here. It seems that you really love <a href=https://t.me/Infinit
 Glad to see you here. It seems that you really love <a href=https://t.me/Infinity_XBotz >Krishna's</a> work.\n\n<b>File to LiNK converting</b> feature will be available soon, please join <a href=https://t.me/Infinity_XBotz>Dev Channel</a> and stay tuned for next <a href=https://t.me/Infinity_XBotz>update</a>.\n\n  🐞 Report Bug here: <a href=https://t.me/Infinity_XBotz_support>KrishnaDev Support</a>
     """
     DNT_TEXT = """Hey sweetie {},
-Thanks for thinking about us.\nIt seems that you really love <a href=https://t.me/Infinity_XBotz >LazyDeveloper's</a> work.\n\n<b>For your kind information, we do not ask or force anyone for any kind of payment</b>. But if you really want to donate us then you can send money to us from below links...\n\n💵 Reach Donation Page : <a href=https://t.me/Infinity_XBotz_support>Click here...</a>\n\nT❤️ hank you so much..
+Thanks for thinking about us.\nIt seems that you really love <a href=https://t.me/Infinity_XBotz >Krishna's</a> work.\n\n<b>For your kind information, we do not ask or force anyone for any kind of payment</b>. But if you really want to donate us then you can send money to us from below links...\n\n💵 Reach Donation Page : <a href=https://t.me/Infinity_XBotz_support>Click here...</a>\n\nT❤️ hank you so much..
     """
     REQ_AUTH_TEXT = """Hello {},
 \nSorry sweetie.. You must have to be the Authentic User to complete this operation...\n\n👮‍♀ REPORT ISSUE HERE: <a href=https://t.me/Infinity_XBotz>KrishnaDeveloper Support</a>\n\n
