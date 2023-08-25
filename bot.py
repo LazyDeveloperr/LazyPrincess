@@ -43,20 +43,12 @@ LazyPrincessBot.start()
 loop = asyncio.get_event_loop()
 
 
-async def start_services():
+async def Lazy_start():
     print('\n')
-    print('------------------- Initalizing Telegram Bot -------------------')
+    print('Initalizing Lazy Bot')
     bot_info = await LazyPrincessBot.get_me()
     LazyPrincessBot.username = bot_info.username
-    print("------------------------------ DONE ------------------------------")
-    print()
-    print(
-        "---------------------- Initializing Clients ----------------------"
-    )
     await initialize_clients()
-    print("------------------------------ DONE ------------------------------")
-    print('\n')
-    print('--------------------------- Importing ---------------------------')
     for name in files:
         with open(name) as a:
             patt = Path(a.name)
@@ -69,33 +61,17 @@ async def start_services():
             sys.modules["plugins." + plugin_name] = load
             print("Imported => " + plugin_name)
     if ON_HEROKU:
-        print("------------------ Starting Keep Alive Service ------------------")
-        print()
         asyncio.create_task(ping_server())
-    print('-------------------- Initalizing Web Server -------------------------')
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0" if ON_HEROKU else BIND_ADRESS
     await web.TCPSite(app, bind_address, PORT).start()
-    print('----------------------------- DONE ---------------------------------------------------------------------')
-    print('\n')
-    print('---------------------------------------------------------------------------------------------------------')
-    print('---------------------------------------------------------------------------------------------------------')
-    print('\n')
-    print('----------------------- Service Started -----------------------------------------------------------------')
-    print('                        bot =>> {}'.format((await LazyPrincessBot.get_me()).first_name))
-    print('                        server ip =>> {}:{}'.format(bind_address, PORT))
-    print('                        Owner =>> {}'.format((OWNER_USERNAME)))
-    if ON_HEROKU:
-        print('                        app runnng on =>> {}'.format(FQDN))
-    print('---------------------------------------------------------------------------------------------------------')
-    print('---------------------------------------------------------------------------------------------------------')
     await idle()
 
 if __name__ == '__main__':
     try:
-        loop.run_until_complete(start_services())
+        loop.run_until_complete(Lazy_start())
     except KeyboardInterrupt:
-        logging.info('----------------------- Service Stopped -----------------------')
+        logging.info('Service Stopped Bye 👋')
 
 
