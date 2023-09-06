@@ -13,6 +13,6 @@ hachoir
 Pillow
 humanize
 aiofiles
-dnspython
+dnspython==2.3.0
 pynewtonmath
 openai
