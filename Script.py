@@ -30,7 +30,7 @@ Here is the help for my COMMANDS."""
 - <a href=https://t.me/pcmoviegroup>𝙼𝚘𝚟𝚒𝚎 𝚁𝚎𝚚𝚞𝚎𝚜𝚝 𝙶𝚛𝚘𝚞𝚙</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and LazyPriness will respond whenever that keyword hits the message
+- Filter is the feature were users can set automated replies for a particular keyword and ᗩᒍᗩ᙭  will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
 1. BOT should have admin privillage.
@@ -60,7 +60,7 @@ Here is the help for my COMMANDS."""
 
 <b>NOTE:</b>
 1. Make me the admin of your channel if it's private.
-2. Make sure that your channel does not contains camrips, porn and fake files.
+2. Make sure that your channel does not contains camrips and fake files.
 3. Forward the last message to me with quotes.
  I'll add all the files in that channel to my db."""
     CONNECTION_TXT = """Help: <b>Connections</b>
