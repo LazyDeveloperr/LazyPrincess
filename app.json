@@ -1,0 +1,160 @@
+{
+    "name": "LazyPrincess",
+    "description": "LazyPrincess is a Super and Fully Advance Auto-filter-Bot - With Artificial Intelligence + File renaming + Url Shortning + Online FIle Streaming Feature. Thanks to LazyDeveloper for making it so cool.",
+    "stack": "container",
+    "keywords": [
+      "LazyDeveloperr",
+      "Lazy Princess Bot",
+      "auto-filter Bot",
+      "Auto-Filter with File Stream",
+      "Auto-filter with url-shortner",
+      "telegram-bot",
+      "best-telegram-bot",
+      "media-search bot",
+      "bots like lazy princess",
+      "Auto Filter bot by LazyDeveloperr",
+      "Auto filter bot github",
+      "Auto filter bot for heroku",
+      "Why I don't know LazyDeveloperr",
+       "Lazy Princess",
+       "LazyPrincess"
+    ],
+    "website": "https://github.com/LazyDeveloperr/LazyPrincess",
+    "repository": "https://github.com/LazyDeveloperr/LazyPrincess",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token.",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "CHANNELS": {
+            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "required": false
+        },
+        "ADMINS": {
+            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "required": true
+        },
+        "PICS": {
+            "description": "Add some telegraph link of pictures .",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "required": true
+        },
+        "AUTH_USERS": {
+            "description": "Username or ID of users to give access of inline search. Separate multiple users by space.\nLeave it empty if you don't want to restrict bot usage.",
+            "required": true
+        },
+        "AUTH_CHANNEL": {
+            "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
+            "required": true
+        },
+        "DATABASE_URI": {
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
+            "required": true
+        },
+        "DATABASE_NAME": {
+            "description": "mongoDB Database name.",
+            "required": true
+        },
+        "COLLECTION_NAME": {
+            "description": "Name of the collections. Defaults name is Telegram_files. If you are using the same database, then use different collection name for each bot",
+            "value": "Telegram_files",
+            "required": false
+        },
+        "SLEEP_THRESHOLD": {
+            "description": "Floodwait Sleep timer. Read the readme for more info about this var",
+            "required": false
+        },
+        "WORKERS": {
+            "description": "Number of workers that is to be assigned. Read the readme for more info about this var",
+            "required": false
+        },
+        "PORT": {
+            "description": "Port that you want your webApp to be listened to. Read the readme for more info about this var",
+            "value": "8080",
+            "required": false
+        },
+        "NO_PORT": {
+            "description": "If you don't want your port to be displayed. Read the readme for more info about this var",
+            "value": "False",
+            "required": false
+        },
+        "HAS_SSL": {
+            "description": "Default value is True",
+            "value": "True",
+            "required": false
+        },
+        "BIND_ADRESS": {
+            "description": "Read the readme for more info about this var  Leave Empty  For heroku",
+            "required": false
+        },
+        "FQDN": {
+            "description": "Read the readme for more info about this var  **Leave Empty for heroku**",
+            "required": true
+        },
+        "name": {
+            "description": "Session Name",
+            "value": "LazyBot",
+            "required": false
+        },
+        "LAZY_MODE": {
+            "description": " True - to enable file renaming feature ",
+            "value": "True",
+            "required": true
+        },
+        "LAZY_RENAMERS": {
+            "description": "Users id, whom you want to allow file renaming ",
+            "value": "5965340120",
+            "required": true
+        },
+        "REQ_CHANNEL": {
+            "description": "To send logs of unavailable contnts",
+            "value": "-100xxxxxxx",
+            "required": true
+        },
+        "URL_MODE": {
+            "description": "True - 'if you want to enable url shortner' else - false ",
+            "value": "False",
+            "required": true
+        },
+        "URL_SHORTENR_WEBSITE": {
+            "description": " Url shortner website link   ",
+            "value": "oemgalinks.in",
+            "required": true
+        },
+        "URL_SHORTNER_WEBSITE_API": {
+            "description": " Url shortner website api  ",
+            "value": "xxxxxxxxxxxxx",
+            "required": true
+        },
+        "LAZY_GROUPS": {
+            "description": " Group id whom you want to bypass url ",
+            "value": "-1001773435994",
+            "required": true
+        },
+        "MY_USERS": {
+            "description": "Id of the users whom you want to allow to forward message in file protection mode ",
+            "value": "5965340120 5448908073 5590491131",
+            "required": true
+        }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+      }],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
