@@ -549,7 +549,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    protect_content=True if ident == "filep" else False 
+                    protect_content=True if ident == "filep" else False,
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🤍 𝗠𝗢𝗩𝗘𝗦 𝗛𝗨𝗕 𝗢𝗚 🤍', url="https://t.me/Movies_Hub_Og") ] ] )
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
@@ -585,7 +586,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            protect_content=True if ident == 'checksubp' else False
+            protect_content=True if ident == 'checksubp' else False,
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🤍 𝗠𝗢𝗩𝗘𝗦 𝗛𝗨𝗕 𝗢𝗚 🤍', url="https://t.me/Movies_Hub_Og") ] ] )          
         )
     elif query.data == "pages":
         await query.answer()
