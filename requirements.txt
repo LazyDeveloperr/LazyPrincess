@@ -1,8 +1,8 @@
 pyrogram==2.0.35
 tgcrypto
 pymongo==4.4.1
-motor==2.5.1
-marshmallow==3.14.1
+motor==3.0.0
+marshmallow==3.20.1
 umongo==3.0.1
 requests
 bs4
