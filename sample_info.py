@@ -1,9 +1,9 @@
 # Bot information
-SESSION = 'Media_search'
+SESSION = 'Virus_Studios'
 USER_SESSION = 'User_Bot'
-API_ID = 12345
-API_HASH = '0123456789abcdef0123456789abcdef'
-BOT_TOKEN = '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11'
+API_ID = 22549633
+API_HASH = '34d8c9887fe445c1dac2228cbdf9ab48'
+BOT_TOKEN = '6052565020:AAGSj-s7O0FJUKe9zc6cWdnhmNJkavu15Is'
 USERBOT_STRING_SESSION = ''
 
 # Bot settings
@@ -11,13 +11,13 @@ CACHE_TIME = 300
 USE_CAPTION_FILTER = False
 
 # Admins, Channels & Users
-ADMINS = [12345789, 'admin123', 98765432]
-CHANNELS = [-10012345678, -100987654321, 'channelusername']
-AUTH_USERS = []
+ADMINS = [2057170163]
+CHANNELS = [-1001402115130 , 'channelusername']
+AUTH_USERS = [2057170163]
 AUTH_CHANNEL = None
 
 # MongoDB information
-DATABASE_URI = "mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb]?retryWrites=true&w=majority"
+DATABASE_URI = "mongodb+srv://virus07:<ditkL!Av3nC H7e>@cluster0.aexnusr.mongodb.net/?retryWrites=true&w=majority"
 DATABASE_NAME = 'Telegram'
 COLLECTION_NAME = 'channel_files'  # If you are using the same database, then use different collection name for each bot
 
