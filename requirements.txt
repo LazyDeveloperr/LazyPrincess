@@ -16,6 +16,9 @@ aiofiles
 dnspython
 pynewtonmath
 openai
+
+#Online Stream & Download
+
 jinja2
 python-dotenv<=0.20.0
 apscheduler
