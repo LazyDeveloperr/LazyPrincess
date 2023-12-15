@@ -79,8 +79,8 @@ class LazyPrincessXBot(Client):
             for message in messages:
                 yield message
                 current += 1
-                
-LazyPrincessBot = LazyPrincessXBot()
 
 multi_clients = {}
 work_loads = {}
+
+LazyPrincessBot = LazyPrincessXBot()
