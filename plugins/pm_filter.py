@@ -679,7 +679,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
         ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloperr')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
