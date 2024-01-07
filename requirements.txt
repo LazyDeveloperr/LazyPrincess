@@ -15,15 +15,20 @@ humanize
 aiofiles
 dnspython
 pynewtonmath
-openai
-
-#Online Stream & Download
-
-jinja2
 python-dotenv<=0.20.0
 apscheduler
 pyshorteners
 psutil
 pyromod
 colorama
+beautifulsoup4
+gunicorn==20.1.0
+numpy
+yt-dlp==2023.11.16
+olefile
+loggers
+filetype
+tldextract
+lk21
+Flask==2.2.2
 

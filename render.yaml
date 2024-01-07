@@ -1,0 +1,74 @@
+services:
+  - type: web
+    plan: free
+    name: LazyPrincess - v-10
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 bot.py
+    repo: https://github.com/LazyDeveloperr/LazyPrincess.git      
+    branch: Master
+    envVars:
+      - key: BOT_TOKEN 
+        sync: false
+      - key: API_ID 
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: WEBHOOK
+        sync: false
+      - key: DATABASE_URI
+        sync: false 
+      - key: LOG_CHANNEL
+        sync: false    
+      - key: SESSION
+        sync: false    
+      - key: PICS
+        sync: false    
+      - key: ADMINS
+        sync: false    
+      - key: CHANNELS
+        sync: false    
+      - key: AUTH_USERS
+        sync: false    
+      - key: AUTH_GROUPS
+        sync: false        
+      - key: DATABASE_NAME
+        sync: false    
+      - key: IMDB
+        sync: false    
+      - key: CUSTOM_FILE_CAPTION
+        sync: false    
+      - key: BATCH_FILE_CAPTION
+        sync: false    
+      - key: SPELL_CHECK_REPLY
+        sync: false    
+      - key: LAZY_MODE
+        sync: false    
+      - key: LAZY_RENAMERS
+        sync: false    
+      - key: REQ_CHANNEL
+        sync: false    
+      - key: ADMIN_USRNM
+        sync: false    
+      - key: MAIN_CHANNEL_USRNM
+        sync: false    
+      - key: DEV_CHANNEL_USRNM
+        sync: false    
+      - key: LAZY_YT_HANDLE
+        sync: false    
+      - key: MOVIE_GROUP_USERNAME
+        sync: false    
+      - key: URL_MODE
+        sync: false    
+      - key: URL_SHORTENR_WEBSITE
+        sync: false    
+      - key: URL_SHORTNER_WEBSITE_API
+        sync: false    
+      - key: LZURL_PRIME_USERS
+        sync: false    
+      - key: FQDN
+        sync: false    
+      - key: SELF_DELETE_SECONDS
+        sync: false    
+
+    autoDeploy: false

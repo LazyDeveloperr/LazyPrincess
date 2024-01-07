@@ -28,7 +28,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
         progress = "{0}{1}".format(
             ''.join(["█" for i in range(math.floor(percentage / 5))]),
             ''.join(["░" for i in range(20 - math.floor(percentage / 5))]))
-            
+
         tmp = progress + script.PROGRESS_BAR.format( 
             round(percentage, 2),
             humanbytes(current),
@@ -47,6 +47,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             )
         except:
             pass
+
 
 def humanbytes(size):
     # https://stackoverflow.com/a/49361727/4723940
@@ -80,9 +81,4 @@ def convert(seconds):
     minutes = seconds // 60
     seconds %= 60      
     return "%d:%02d:%02d" % (hour, minutes, seconds)
-
-         
-
-
-
 
