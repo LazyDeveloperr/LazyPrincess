@@ -6,9 +6,9 @@
 </h1>
 
 ## ⚡️Features
-
+- 🔥 UPCOMING : `BOT CLONING[V-_._]` & `LANGUAGE and SEASON FILTER[V-_._]`
 - [x] 🔥 New feature :
-    - [+] ⚡️ Added `Artificial Inteligence` feature and many more feature ⚡️
+    - [+] ⚡️ Added `URL UPLOADING` feature and many more  ⚡️
     - [+] ⚡️ Added `file renaming` feature ⚡️
       - super premium repo...
     - [+] ⚡️ Support 2GB + Files ⚡️
@@ -40,11 +40,19 @@ Read [this](https://telegram.dog/LazyDevelopers/8) before you start messing up w
 * `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com).
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
 * `REQ_CHANNEL`: Channel ID where logs of requested content is to be sent.
-### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
 * `LAZY_MODE`: True or False . If true then bot will rename files else it will not rename.
 * `LAZY_RENAMERS`: ID of the users to which you want to give file renaming authentication. Separate multiple ids by space.
+* `REQ_CHANNEL`: ID of the channel where you want to send request logs.
+* `URL_MODE`: True or False. If true then bot will use url shortner.
+* `URL_SHORTENR_WEBSITE`: Name of the url shortner website.
+* `URL_SHORTNER_WEBSITE_API`: API ID of the url shortner website.
+* `LZURL_PRIME_USERS`: IDs of the users who you don't want to use url. Separate multiple ids by space
+* `LAZY_GROUPS`: IDs of the groups where you don't want bot to use url. Separate multiple ids by space
+* `MY_USERS`: ID of the users to which you want to give file sharing authentication for private files. Separate multiple ids by space.
+* `FQDN`: Domain name of your currently deployed bot.
+* `PRIME_DOWNLOADERS`: ID of the users to which you want to give file uploading using url. Separate multiple ids by space.
 
 
 * Check [info.py](https://github.com/LazyDeveloperr/LazyPrincess/blob/master/info.py) for more
@@ -108,8 +116,12 @@ python3 bot.py
 • /link - to create link for one post
 • /set_caption - to set new custom caption #renaming_feature
 • /del_caption - To delete custom caption #renaming_feature
-• /viewthumb - To view custom thumbnail #renaming_feature
-• /delthumb - To delete custom thumbnail #renaming_feature
+• /set_thumb or /st - To set custom thumbnail #renaming_feature
+• /set_lazy_thumb or /slt - To set custom thumbnail #url_downloading_feature
+• /view_thumb or /vt - To view custom thumbnail #renaming_feature
+• /view_lazy_thumb or /vlt - To view custom thumbnail #url_downloading_feature
+• /del_thumb or /dt - To delete custom thumbnail #renaming_feature
+• /del_lazy_thumb or /dlt - To delete custom thumbnail #url_downloading_feature
 
 ```
 ## Support
@@ -122,6 +134,8 @@ python3 bot.py
 
 ## Thanks to 
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for helping us in this journey ❤
+ - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for adding amazing `url uploadig feature` 🎉
+ - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for adding `online file streaming feature` 🎉
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for adding `file renaming feature` 🎉
  - Thank you [LazyDeveloper](https://github.com/LazyDeveloperr) for keeping this `super premium repo` for `free` ❤
  - Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
@@ -132,6 +146,25 @@ python3 bot.py
 ### Note
 
 [Join Main Channel](https://telegram.dog/LazyDeveloper): LazyDeveloper 🎁
+
+
+### 🔗 important_Links
+- [🤩 Create Auto Filter BOT](https://www.youtube.com/playlist?list=PLZHPDcp3Vkih9GDM7BUJ1UF988n23Ua__)
+- [۞ Repo Editing Tutorials](https://www.youtube.com/playlist?list=PLZHPDcp3Vkiid03NJtFpi8gIov-QJMolK)
+- [🤩 Error Handling Videos](https://www.youtube.com/playlist?list=PLZHPDcp3VkigMWoTjujScuhFLCl1jl-ah)
+- [۞ Create FILE TO LINK BOT](https://www.youtube.com/watch?v=h3Uvr15ZPnc)
+- [🤩 Create Movie Request BOT](https://www.youtube.com/watch?v=mIEv7MjLj2U&t=38s)
+- [❣️ Join Youtube](https://www.youtube.com/@LazyDeveloperr)
+
+
+#### 🧡 Respecting... 🧡
+- [🔥 LazyDeveloperr](https://github.com/LazyDeveloperr) 
+
+### 🤩 INSPIRATION
+<a href="https://telegram.dog/LazyPrincessX_BOT">
+   <p>❣️ LazyPrincess 🔥</p>
+</a>
+
 
 ## Disclaimer
 [![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
