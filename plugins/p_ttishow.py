@@ -1,7 +1,7 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, LAZY_GROUP_LOGS
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
@@ -29,7 +29,6 @@ async def save_group(bot, message):
                 text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
                 reply_markup=reply_markup,
             )
-
             try:
                 await k.pin()
             except:
@@ -42,8 +41,24 @@ async def save_group(bot, message):
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"<b>Thank you For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
             reply_markup=reply_markup)
+
+        # GROUP ACTIONS IN CONTROL => Coded By YT@LazyDeveloperr with love ❣️
+        chatID = message.chat.id
+        chatTitle = message.chat.title
+        lz_buttons = [
+            [
+                InlineKeyboardButton('🎉 Mark Verified 💞', callback_data=f"verify_lazy_group:{chatTitle}:{chatID}")
+            ],[
+                InlineKeyboardButton('⚙ Ban Chat', callback_data=f"bangrpchat:{chatTitle}:{chatID}")
+            ],[
+                InlineKeyboardButton('🚮 Close', callback_data="close_data")
+            ]]
+        lazy_markup=InlineKeyboardMarkup(lz_buttons)
+        await bot.send_message(LAZY_GROUP_LOGS,
+                            text=f"Hey babe.\n I am added forcefully to this group named **{chatTitle}** Please tell me if you like to restrict this group...",
+                            reply_markup=lazy_markup)
     else:
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
@@ -54,7 +69,6 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
-
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
