@@ -1,4 +1,3 @@
-
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
@@ -10,5 +9,5 @@ fi
 cd /Eva
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
-python3 bot.py
 
+python3 bot.py
